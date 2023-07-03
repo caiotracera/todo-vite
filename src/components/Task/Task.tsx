@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { Trash } from '@phosphor-icons/react';
 
 import { Checkbox } from '@/components/Checkbox';
@@ -11,7 +13,11 @@ export function Task({
   onCheck,
   onTrashClick,
 }: TaskProps) {
+  const [isDone, setIsDone] = useState(done);
+
   function handleTaskCheck() {
+    setIsDone((prevState) => !prevState);
+
     if (onCheck) {
       onCheck();
     }
@@ -25,8 +31,8 @@ export function Task({
 
   return (
     <S.Wrapper>
-      <Checkbox checked={done} onChange={handleTaskCheck} />
-      <S.Content done={done}>{content}</S.Content>
+      <Checkbox checked={isDone} onChange={handleTaskCheck} />
+      <S.Content done={isDone}>{content}</S.Content>
       <S.TrashIcon icon={<Trash />} onClick={handleTrashClick} />
     </S.Wrapper>
   );
