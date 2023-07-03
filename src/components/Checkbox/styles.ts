@@ -11,8 +11,9 @@ export const Wrapper = styled.input`
 
     appearance: none;
 
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 100%;
+    max-width: 24px;
+    height: 24px;
 
     border: 1px solid ${theme.colors['blue-500']};
     border-radius: 50%;
@@ -30,7 +31,7 @@ export const Wrapper = styled.input`
       transform: rotate(35deg);
       position: absolute;
 
-      top: 4px;
+      top: 5px;
       opacity: 0;
       transition: 0.2s ease-in-out;
     }
