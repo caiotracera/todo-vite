@@ -9,7 +9,7 @@ export const Content = styled.main`
   margin: 0 auto 266px;
 `;
 
-export const NewTask = styled.section`
+export const NewTask = styled.form`
   margin-top: -28px;
 
   display: flex;
