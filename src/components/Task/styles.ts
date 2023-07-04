@@ -31,6 +31,8 @@ export const Content = styled.p<ContentProps>`
     font-size: 14px;
     line-height: 1.4;
 
+    flex: 1;
+
     ${done && contentModifiers.done()}
   `}
 `;

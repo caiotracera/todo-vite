@@ -1,4 +1,5 @@
 export type TaskProps = {
+  id: string;
   content: string;
   done?: boolean;
   onTrashClick?: () => void;
